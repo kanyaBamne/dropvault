@@ -1,0 +1,13 @@
+package com.dropvault.dropvault;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class DropvaultApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

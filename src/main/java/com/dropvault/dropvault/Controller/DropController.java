@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import java.util.UUID;
+import jakarta.validation.Valid;
 
 
 @RestController 
@@ -26,7 +27,7 @@ public class DropController {
     private final SecretService SecretService;
 
     @PostMapping
-    public ResponseEntity<DropResponse> createdDrop(@RequestBody CreateDropRequest request){
+    public ResponseEntity<DropResponse> createdDrop(@Valid @RequestBody CreateDropRequest request){
         SecretDrop savedDrop = SecretService.createSecret(
             request.content(),
             request.expiresInMinutes(),
